@@ -28,4 +28,5 @@ node default {
   # This is where you can declare classes for all nodes.
   # Example:
   notify { 'this is the default': }
+  notify { 'code to print only on dev for now': }
 }
