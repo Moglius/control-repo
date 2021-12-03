@@ -1,0 +1,16 @@
+# This workflow deploy a new environment in a pull_request or push event
+
+name: Deploy Environment on MoM
+
+on: [push, pull_request]
+
+jobs:
+  deploy:
+
+    runs-on: self-hosted
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Deploy Environments
+      run: |
+        /opt/puppetlabs/bin/puppet-code deploy --all --wait
