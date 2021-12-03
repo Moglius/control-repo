@@ -31,6 +31,12 @@ node 'agent1.localdomain' {
   include apache
 }
 
+node 'agent2.localdomain' {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  include apache
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
