@@ -16,6 +16,19 @@ forge 'https://forge.puppet.com'
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
 
+###########################################################
+######################## CUSTOM ###########################
+###########################################################
+
 mod 'apache',
   git:    'https://github.com/Moglius/puppet-apache.git',
   branch: 'main'
+
+
+###########################################################
+######################### FORGE ###########################
+###########################################################
+
+# Adding puppet selinux module from forge
+mod 'puppetlabs-stdlib', '8.1.0'
+mod 'puppet-selinux', '3.4.1'
