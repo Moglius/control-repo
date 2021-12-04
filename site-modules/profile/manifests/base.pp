@@ -1,5 +1,10 @@
 class profile::base {
 
-  #the base profile should include component modules that will be on all nodes
+  if $facts['os']['family'] == 'RedHat' {
+    class { 'selinux':
+      mode => 'permissive',
+      type => 'targeted',
+    }
+  }
 
 }

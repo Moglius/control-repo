@@ -24,8 +24,22 @@ File { backup => false }
 # Puppet Enterprise console and External Node Classifiers (ENC's).
 #
 # For more on node definitions, see: https://puppet.com/docs/puppet/latest/lang_node_definitions.html
+
+node 'agent1.localdomain' {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  include apache
+}
+
+node 'agent2.localdomain' {
+  # This is where you can declare classes for all nodes.
+  # Example:
+  include role::webserver
+}
+
 node default {
   # This is where you can declare classes for all nodes.
   # Example:
   notify { 'this is the default': }
+  notify { 'code to print only on dev for now': }
 }
