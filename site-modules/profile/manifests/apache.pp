@@ -7,9 +7,4 @@ class profile::apache {
     document_root => '/var/www/project1',
   }
 
-  apache::vhost {'project2':
-    vhost_name    => 'project2.example.com',
-    document_root => '/var/www/project2',
-  }
-
 }
