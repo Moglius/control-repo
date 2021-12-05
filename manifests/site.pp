@@ -28,7 +28,7 @@ File { backup => false }
 node 'agent1.localdomain' {
   # This is where you can declare classes for all nodes.
   # Example:
-  include apache
+  include role::webserver
 }
 
 node 'agent2.localdomain' {
