@@ -1,6 +1,8 @@
 class profile::apache {
 
-  include apache
+  class { 'apache': }
+
+  contain apache
 
   apache::vhost {'project1':
     vhost_name    => 'project1.example.com',
